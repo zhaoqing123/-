@@ -1,0 +1,608 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+	<title>基本地图展示</title>
+	<link rel="stylesheet" href="css/index.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+	<script  type="text/javascript" src="js/jquery.js"></script>
+	<script  type="text/javascript" src="js/data.js"></script>
+	<script  type="text/javascript" src="js/tree.js"></script>
+    <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+    <script src="http://webapi.amap.com/maps?v=1.4.5&key=3b36f222cb91b01134fece4fad484486"></script>
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/data1.js" type="text/javascript"></script>
+</head>
+<body>
+	<div id="container"></div>
+
+	<div class="right-content pa">
+		<div class="search-show clearfix">
+			<div class="search-wrap pr fl">
+				<input type="text" class="search-input"/>
+				<span class="comicon search-icon pa"></span>
+			</div>
+			<div class="fl sort-show pr">
+				<div class="show-on">
+					<span class="text-on">大屏模式</span>
+					<span class="comicon arrows-up pa"></span>
+				</div>
+				<ul class="pa model-wrap">
+					<li id="1">大屏模式</li>
+					<li id="2">地图模式</li>
+					<li id="3">视频模式</li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav-wrap">
+			<ul class="tit-wrap clearfix">
+				<li class="active hand fl">摄像头A</li>
+				<li class="hand fl">摄像头B</li>
+				<li class="hand fl">摄像头C</li>
+			</ul>
+			<div class="jq-wraps">
+				<div class="fjq-wrap content pr">
+					<span class="right-layer pa"></span>
+					<ul class="content-wrap" id = "start">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="showmsg">
+			<div class="phpto-wrap">
+				<ul>
+					<li class="clearfix"><span class="fl tit-lf">设备编号：</span><span class="lf">11132</span></li>
+					<li class="clearfix"><span class="fl tit-lf">设备名称:</span><span class="lf"> Video camera</span></li>
+					<li class="clearfix"><span class="fl tit-lf">状态：</span><span class="lf">打开</span></li>
+					<li class="clearfix"><span class="fl tit-lf">所属区域：</span><span class="lf">丽江</span></li>
+					<li class="clearfix"><span class="fl tit-lf">地址：</span><span class="lf">沪沽湖风景区</span></li>
+					<li class="clearfix"><span class="fl tit-lf">经度：</span><span class="lf">321456585</span></li>
+					<li class="clearfix"><span class="fl tit-lf">纬度：</span><span class="lf">54412335</span></li>
+					<li class="clearfix"><span class="fl tit-lf">负责人：</span><span class="lf">大黄</span></li>
+					<li class="clearfix"><span class="fl tit-lf">负责人电话：</span><span class="lf">13265478988</span></li>
+				</ul>
+			</div>
+			<div class="address-wrap hide">
+					<ul>
+						<li class="clearfix"><span class="fl tit-lf">所属区域：</span><span class="lf">丽江</span></li>
+						<li class="clearfix"><span class="fl tit-lf">摄像头数：</span><span class="lf">120</span></li>
+						<li class="clearfix"><span class="fl tit-lf">故障数：</span><span class="lf">60</span></li>
+						<li class="clearfix"><span class="fl tit-lf">负责人：</span><span class="lf">小王</span></li>
+						<li class="clearfix"><span class="fl tit-lf">负责电话：</span><span class="lf">13651051171</span></li>
+					</ul>
+			</div>
+		</div>
+	</div>
+	<div class="left-conent pa content" id="content_2">
+		<div class="sort-video clearfix">
+			<div class="lf video pr">
+				<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+				<div class="pa bot-tip">
+					<p>泸沽湖风景区马路</p>
+					<div class="model1style">
+						<span class="big-screen pa hand" clicks="1"></span>
+						<span class="comicon full-srcreen pa hand" clicks="1"></span>
+					</div>
+					<div class="model3style">
+						<span class="big-screen pa hand" clicks="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="lf video pr">
+				<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+				<div class="pa bot-tip">
+					<p>泸沽湖风景区马路</p>
+					<div class="model1style">
+						<span class="big-screen pa hand" clicks="1"></span>
+						<span class="comicon full-srcreen pa hand" clicks="1"></span>
+					</div>
+					<div class="model3style">
+						<span class="big-screen pa hand" clicks="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="lf video pr">
+				<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+				<div class="pa bot-tip">
+					<p>泸沽湖风景区马路</p>
+					<div class="model1style">
+						<span class="big-screen pa hand" clicks="1"></span>
+						<span class="comicon full-srcreen pa hand" clicks="1"></span>
+					</div>
+					<div class="model3style">
+						<span class="big-screen pa hand" clicks="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="lf video pr">
+					<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+					<div class="pa bot-tip">
+						<p>泸沽湖风景区马路</p>
+						<div class="model1style">
+							<span class="big-screen pa hand" clicks="1"></span>
+							<span class="comicon full-srcreen pa hand" clicks="1"></span>
+						</div>
+						<div class="model3style">
+							<span class="big-screen pa hand" clicks="1"></span>
+						</div>
+					</div>
+				</div>
+			<div class="lf video pr">
+				<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+				<div class="pa bot-tip">
+					<p>泸沽湖风景区马路</p>
+					<div class="model1style">
+						<span class="big-screen pa hand" clicks="1"></span>
+						<span class="comicon full-srcreen pa hand" clicks="1"></span>
+					</div>
+					<div class="model3style">
+						<span class="big-screen pa hand" clicks="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="lf video pr">
+				<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+				<div class="pa bot-tip">
+					<p>泸沽湖风景区马路</p>
+					<div class="model1style">
+						<span class="big-screen pa hand" clicks="1"></span>
+						<span class="comicon full-srcreen pa hand" clicks="1"></span>
+					</div>
+					<div class="model3style">
+						<span class="big-screen pa hand" clicks="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="lf video pr">
+				<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+				<div class="pa bot-tip">
+					<p>泸沽湖风景区马路</p>
+					<div class="model1style">
+						<span class="big-screen pa hand" clicks="1"></span>
+						<span class="comicon full-srcreen pa hand" clicks="1"></span>
+					</div>
+					<div class="model3style">
+						<span class="big-screen pa hand" clicks="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="lf video pr">
+				<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+				<div class="pa bot-tip">
+					<p>泸沽湖风景区马路</p>
+					<div class="model1style">
+						<span class="big-screen pa hand" clicks="1"></span>
+						<span class="comicon full-srcreen pa hand" clicks="1"></span>
+					</div>
+					<div class="model3style">
+						<span class="big-screen pa hand" clicks="1"></span>
+					</div>
+				</div>
+			</div>
+			<div class="lf video pr">
+				<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>
+				<div class="pa bot-tip">
+					<p>泸沽湖风景区马路</p>
+					<div class="model1style">
+						<span class="big-screen pa hand" clicks="1"></span>
+						<span class="comicon full-srcreen pa hand" clicks="1"></span>
+					</div>
+					<div class="model3style">
+						<span class="big-screen pa hand" clicks="1"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<span class="comicon esc pa"></span>
+
+	<script>
+		// console.log(trees);
+		/*菜单树调用*/
+		new Tree({
+			data:zNodes,
+			pNode:document.getElementById("start"),
+			container:document.getElementById("content_1")
+		}).run();
+		var model1sEle = $('.model1style'),
+			model3sEle = $('.model3style');
+		var mapWrap = $('#container'),
+			videoEle = $('.left-conent'),
+			videoEvery = $('.left-conent .video'),
+			rightEle = $('.right-content'),
+			windowHeight = $(window).height(),
+			windowWidth = $(window).width(),
+			topHeight = (windowHeight/10)*6,
+			mapHeight=(windowHeight/10)*4,
+			outerH=$('.search-show').outerHeight();
+		if( videoEle.is(':visible')){
+			mapWrap.css({'height':mapHeight,'width':windowWidth*0.8-2,'top':topHeight});
+			videoEle.css({'height':topHeight});
+			rightEle.css({'height':windowHeight});
+			videoEvery.css({'height':(topHeight-4)/2,"width":(videoEle.width()-8)/4});
+			$('.nav-wrap').css({'height':topHeight-outerH-6});
+			$('.fjq-wrap').css({'height':topHeight-outerH-41});
+			$('.showmsg').css({'height':windowHeight-topHeight});
+		}else{
+			mapWrap.css({'height':windowHeight});
+		}
+
+		$(window).load(function(){
+				/*滚动条控制*/
+			if($('.sort-video').height()>videoEle.height()){
+				$("#content_2").mCustomScrollbar({
+					scrollButtons:{
+						enable:true
+					}
+				});
+			}
+				/*控制视频显示*/
+			$('video').each(function(){
+				$(this).get(0).play();
+			});
+		});
+		/*全屏视频模式下视频模式控制*/
+		videoEvery.each(function(){
+				var fullicon = $(this).find('.full-srcreen');
+				fullicon.on('click',function(){
+					var h=videoEle.height();
+					if($(this).attr('clicks')=='1'){
+						$('.big-screen').unbind('click');
+						videoEvery.css({'display':"none"});
+						$(this).parents('.video').css({"width":windowWidth,"height":windowHeight,"display":'block'});
+						videoEle.css({"width":windowWidth,"height":windowHeight,"z-index":'9'});
+						$("#content_2").mCustomScrollbar("disable");
+						$('.mCS_disabled>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar').css({'margin-right':0});
+						$(this).attr('clicks','0');
+					}else{
+						videoEvery.css({'display':"block"});
+						videoEle.css({"width":"80%","height":topHeight,"z-index":'9'});
+						$(this).parents('.video').css({"width":(videoEle.width()-8)/4,'height':(topHeight-4)/2,"display":'block'});
+						$("#content_2").mCustomScrollbar("update");
+						$(this).attr('clicks','1');
+						$('.big-screen').bind('click',clickAction);
+					}
+				})
+		})
+		/*大屏下视频模式控制*/
+		function clickAction(){
+			var h=videoEle.height();
+			if($(this).attr('clicks')=='1'){
+				if(h<=topHeight+2){
+					videoEvery.css({'display':"none"});
+					$(this).parents('.video').css({"width":windowWidth*0.8-2,"height":topHeight,"display":'block'});
+				}else{
+					videoEvery.css({'display':"none"});
+					$(this).parents('.video').css({"width":"100%","height":windowHeight,"display":'block'});
+				}
+				$("#content_2").mCustomScrollbar("disable");
+				$('.mCS_disabled>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar').css({'margin-right':0});
+				$(this).attr('clicks','0');
+			}else{
+				if(h<=topHeight+2){
+					videoEvery.css({'display':"block"});
+					$(this).parents('.video').css({"width":(videoEle.width()-8)/4,'height':(topHeight-4)/2,"display":'block'});
+					$("#content_2").mCustomScrollbar("update");
+				}else{
+					videoEvery.css({'display':"block"});
+					$(this).parents('.video').css({"width":(windowWidth-8)/4,"height":(windowHeight-6)/3,"display":'block'});
+				}
+				$(this).attr('clicks','1');
+			}
+		}
+		function videoFull(){
+			videoEvery.each(function(){
+				var bigicon = $(this).find('.big-screen');
+				bigicon.on('click',clickAction)
+			})
+		}
+		videoFull();
+		/*选择模式下拉框控制*/
+		$('.show-on').on('click',function(){
+			$(this).find('.arrows-up').toggleClass('arrows-down');
+			$('.model-wrap').toggle();
+		});
+		/*恢复大屏模式*/
+		function esaShow(ele){
+			$(".esc").show();
+			$(".esc").on('click',function(){
+				videoEle.add(rightEle).show();
+				if(ele==mapWrap){
+					mapWrap.css({'height':mapHeight,'width':windowWidth*0.8-2,'top':topHeight});
+				}else if(ele==videoEle){
+					videoEle.removeClass('full-screen');
+					videoEle.css({"width":windowWidth,"height":windowHeight,"z-index":'9'});
+					videoEle.css({"width":"80%","height":topHeight,"z-index":'9'});
+					videoEle.css({'height':topHeight});
+					videoEvery.css({'height':(topHeight-4)/2});
+				}
+				$('.video').css({'display':"block"});
+			    $('.video').css({"width":(videoEle.width()-8)/4,'height':(topHeight-4)/2,"display":'block'});
+				$(this).hide();
+				model1sEle.show();
+				model3sEle.hide();
+			})
+		}
+		/*视频部分去掉滚动条显示*/
+		function model3(){
+			if($('.sort-video').height()<=windowHeight){
+				$("#content_2").mCustomScrollbar("disable");
+				$('.mCS_disabled>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar').css({'margin-right':0});
+			}else{
+				$("#content_2").mCustomScrollbar("update");
+			}
+		}
+		/*三种模式切换*/
+		$('.model-wrap li').on('click',function(){
+			videoFull();
+			$('.text-on').text($(this).text());
+			$('.show-on .arrows-up').removeClass('arrows-down');
+			$('.model-wrap').hide();
+			if($(this).attr('id')==1){
+				videoEle.add(rightEle).show();
+				mapWrap.css({'height':mapHeight,'width':windowWidth*0.8-2,'top':topHeight});
+				model3();
+				videoFull();
+			}else if($(this).attr('id')==2){
+				videoEle.add(rightEle).hide();
+				mapWrap.css({'height':windowHeight,'width':windowWidth,'top':0});
+				esaShow(mapWrap);
+			}else if($(this).attr('id')==3){
+				model1sEle.hide();
+				model3sEle.show();
+				$('.big-screen').attr('clicks',"1");
+				videoEle.addClass('full-screen');
+				videoEle.css({"width":windowWidth,"height":windowHeight,"z-index":'9'});
+				$('.full-screen').css({'height':windowHeight});
+				videoEvery.css({'height':(windowHeight-6)/3});
+				esaShow(videoEle);
+				model3();
+				videoFull();
+				$('.video').css({'display':"block"});
+				$('.video').css({"width":(windowWidth-8)/4,"height":(windowHeight-6)/3,"display":'block'});
+			}
+		});
+		/*地图加载*/
+		var map = new AMap.Map('container', {
+			resizeEnable: true,
+			zoom:13,
+			center: [100.793709,27.712608]
+		});
+		/*去掉地图控制条*/
+		$('.amap-controls').css({'display':'none'});
+		/*取消冒泡函数*/
+		function secondTit(ev){
+			var oEvent = ev || event;
+			oEvent.cancelBubble=true;
+		}
+		/*追加摄像头的小图标 并且在地图上突出显示视频的位置*/
+		var caremraString = '<span class="creamas-icon pa"></span>';
+		$(".second-tit[data-leaf]").each(function(){
+			var strs= $(this).find('.text-tit-second').text();
+			var reg = RegExp(/摄像头/);
+			if($(this).data("leaf") && reg.test(strs)){
+				$(this).append(caremraString);
+			}else{
+				$(this).attr("data-leaf","false");
+			}
+		});
+		/*点击摄像头文字  左边显示对应的视频*/
+		var addressWrap = $('.address-wrap'),
+			photoWrap = $('.phpto-wrap');
+		var creamString = '<div class="videos pr">'+
+								'<video autoplay="autoplay" name="media" style="width:100%; height:100%; object-fit: fill"><source src="d0200o9d5mi.p202.1.mp4" type="video/mp4"></video>'+
+								'<div class="pa bot-tip">'+
+									'<p>泸沽湖风景区马路</p>'+
+									'<span class="close-srcreen pa hand"></span>'+
+								'</div>'+
+						    '</div>'
+		$(".second-tit[data-leaf]").each(function(){
+			$(this).find('.text-tit-second').on('click',function(e){
+				var val = $(this).parents('.second-tit[data-leaf]').data("leaf");
+				if(!val){
+					addressWrap.show();
+					photoWrap.hide();
+				}else{
+					addressWrap.hide();
+					photoWrap.show();
+					$('.sort-video').hide();
+					if($('.left-conent .videos').length!=0){
+						$('.left-conent .videos').remove();
+					}
+					$('.mCSB_container').append(creamString);
+					$('.left-conent .videos').css({'height':topHeight});
+					model3();
+					$('.close-srcreen').on('click',function(){
+						$('.sort-video').show();
+						$('.left-conent .videos').remove();
+						if($('.sort-video').height()<=topHeight){
+							$("#content_2").mCustomScrollbar("disable");
+							$('.mCS_disabled>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar').css({'margin-right':0});
+						}else{
+							$("#content_2").mCustomScrollbar("update");
+						}
+					});
+				}
+			});
+		});	
+		/*地图上显示全部的摄像头  温泉 里格半岛  祭神台  走婚桥*/
+		var aPhotos=[
+			[100.731396,27.772999],
+			[100.730366,27.765557],
+			[100.751652,27.775581],
+			[100.737747,27.753404],
+			[100.717491,27.757658],
+
+			[100.75148,27.7275],
+			[100.759462,27.736616],
+			[100.749592,27.722106],
+			[100.760235,27.716939],
+
+			[100.808643,27.707213],
+			[100.812763,27.698246],
+			[100.821432,27.711088],
+			[100.787787,27.694218],
+			[100.829414,27.71238],
+
+			[100.877136,27.709872],
+			[100.873531,27.715875],
+			[100.874218,27.701665],
+			[100.881514,27.714963]
+		]
+		function onephoto(){
+			aPhotos.forEach(function(item,index){
+				var marker = new AMap.Marker({ 
+					map: map,
+					position:item, 
+					offset: new AMap.Pixel(0, 0), 
+					draggable: true, 
+					content: '<img src="images/camera.png" />'
+				});
+			});
+		}
+		onephoto();
+		/*点击位置名称改变地图位置并且显示区域内摄像头*/
+		// var aPhoto2=[
+		// 	[100.75148,27.7275],
+		// 	[100.759462,27.736616],
+		// 	[100.749592,27.722106],
+		// 	[100.760235,27.716939],
+
+		// 	[100.808643,27.707213],
+		// 	[100.812763,27.698246],
+		// 	[100.821432,27.711088],
+		// 	[100.787787,27.694218],
+		// 	[100.829414,27.71238],
+
+		// 	[100.877136,27.709872],
+		// 	[100.873531,27.715875],
+		// 	[100.874218,27.701665],
+		// 	[100.881514,27.714963],
+		// ];
+		// var aPhoto3=[
+		// 	[100.808643,27.707213],
+		// 	[100.812763,27.698246],
+		// 	[100.821432,27.711088],
+		// 	[100.787787,27.694218],
+		// 	[100.829414,27.71238],
+
+		// 	[100.877136,27.709872],
+		// 	[100.873531,27.715875],
+		// 	[100.874218,27.701665],
+		// 	[100.881514,27.714963],
+		// ];
+		// var aPhoto4=[
+		// 	[100.877136,27.709872],
+		// 	[100.873531,27.715875],
+		// 	[100.874218,27.701665],
+		// 	[100.881514,27.714963],
+		// ]
+		// $(".second-tit[data-leaf]").each(function(index,element){
+		// 	$(this).find('.text-tit-second').on('click',function(e){
+		// 		var val = $(this).parents('.second-tit[data-leaf]').data("leaf");
+		// 		if(!val){
+		// 			if(index==0){
+		// 				var map = new AMap.Map('container', {
+		// 					resizeEnable: true,
+		// 					zoom:13,
+		// 					center: [100.793709,27.712608]
+		// 				});
+		// 				aPhotos.forEach(function(item,index){
+		// 					var marker = new AMap.Marker({ 
+		// 						map: map,
+		// 						position:item, 
+		// 						offset: new AMap.Pixel(0, 0), 
+		// 						draggable: true, 
+		// 						content: '<img src="images/camera.png" />'
+		// 					});
+		// 				});
+		// 			}else if(index==1){
+		// 				var maps=new AMap.Map('container', {
+		// 					resizeEnable: true,
+		// 					zoom:13,
+		// 					center: [100.75148,27.7275]
+		// 				});
+		// 				setTimeout(() => {
+		// 					aPhoto2.forEach(function(item,index){
+		// 						new AMap.Marker({ 
+		// 							map: maps,
+		// 							position:item, 
+		// 							offset: new AMap.Pixel(0, 0), 
+		// 							draggable: true, 
+		// 							content: '<img src="images/camera.png" />'
+		// 						})
+		// 					});
+		// 				}, 400);
+		// 			}else if(index==2){
+		// 				var maps=new AMap.Map('container', {
+		// 					resizeEnable: true,
+		// 					zoom:13,
+		// 					center: [100.808643,27.707213]
+		// 				});
+		// 				setTimeout(() => {
+		// 					aPhoto3.forEach(function(item,index){
+		// 						new AMap.Marker({ 
+		// 							map: maps,
+		// 							position:item, 
+		// 							offset: new AMap.Pixel(0, 0), 
+		// 							draggable: true, 
+		// 							content: '<img src="images/camera.png" />'
+		// 						})
+		// 					});
+		// 				}, 400);
+		// 			}else if(index==3){
+		// 				var maps=new AMap.Map('container', {
+		// 					resizeEnable: true,
+		// 					zoom:13,
+		// 					center: [100.877136,27.709872]
+		// 				});
+		// 				setTimeout(() => {
+		// 					aPhoto4.forEach(function(item,index){
+		// 						new AMap.Marker({ 
+		// 							map: maps,
+		// 							position:item, 
+		// 							offset: new AMap.Pixel(0, 0), 
+		// 							draggable: true, 
+		// 							content: '<img src="images/camera.png" />'
+		// 						})
+		// 					});
+		// 				}, 400);
+		// 			}
+		// 		}
+		// 	})
+		// });
+		// $(".second-tit[data-leaf]").each(function(index,element){
+
+		// });
+		var aleafEle=$(".second-tit[data-leaf='false']"),
+			lens=aleafEle.length;
+		aleafEle.each(function(index,element){
+			$(this).on('click',function(){
+				var center=trees[index].ip;
+				var arrs=trees[index].carema;
+				var maps=new AMap.Map('container', {
+					resizeEnable: true,
+					zoom:13,
+					center: center
+				});
+				setTimeout(() => {
+					arrs.forEach(function(item,index){
+						new AMap.Marker({ 
+							map: maps,
+							position:item, 
+							offset: new AMap.Pixel(0, 0), 
+							draggable: true, 
+							content: '<img src="images/camera.png"/>'
+						})
+					});
+				}, 400);
+			});
+		})	
+	</script>
+	
+</body>
+</html>

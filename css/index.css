@@ -1,0 +1,251 @@
+body{margin: 0 auto; height: 100%;/* position: relative;*/ font-size: 12px; background: #222222; width: 100%;overflow-x:hidden; font-family:"PingFangSC-Light","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif; color: #333; background: #fff}
+h1, h2, h3, h4, p,div,span{margin:0; padding:0}
+dl, dt, dd, ul, ol, li,input,h1,p,img,textarea{margin:0; padding:0; list-style:none; border:0 none}
+input, textarea, select{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none}
+select{appearance:none; -moz-appearance:none; -webkit-appearance:none;}
+textarea{resize:none}
+table{border-collapse:collapse;border-spacing:0;border-right:1px solid #ddd;border-bottom:1px solid #ddd;}
+table td{border-left:1px solid #ddd;border-top:1px solid #ddd;}
+table th{border-left:1px solid #ddd; /*font-weight: normal;*/border-top:1px solid #ddd;border-bottom: solid 2px #ddd;height: 48px;line-height: 48px; font-size: 14px; text-align: center;}
+input[type="submit"], input[type="reset"], input[type="button"], input[type="submit"],input[type="button"], textarea, select{-webkit-appearance:none; -webkit-gradien:none; -webkit-linear-gradient:none; -moz-linear-gradient:none; -ms-linear-gradient:none; -o-linear-gradient:none; linear-gradient:none;border:0 none;}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{-webkit-appearance:none !important; margin:0}
+input[type="number"]{-moz-appearance:textfield}
+::-webkit-input-placeholder{color:#878787}
+::-moz-placeholder{color:#878787}
+:-ms-input-placeholder{color:#878787}
+a{color: #000}
+.programs-wrap .container{
+  position: relative;
+}
+*{
+  -webkit-tap-highlight-color: transparent;
+  /*    -webkit-appearance: none;*/
+}
+/*去掉点击a时背景变灰*/
+input,select{
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  /*-webkit-user-select: none;*/
+  /*-moz-user-select: none;*/
+  -ms-user-select: none;
+  user-select: none;
+}
+/* input[type="text"]{ */
+  /* -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  background-color: rgb(255, 255, 255) !important; */
+  /* background-image: none !important;
+  color: rgb(0, 0, 0) !important;
+  -webkit-tap-highlight-color:rgba(255,255,255,0) !important;
+} */
+a:link{text-decoration:none;   /* 指正常的未被访问过的链接}
+a:visited{text-decoration:none; /*指已经访问过的链接*/}
+a:hover{text-decoration:none;/*指鼠标在链接*/}
+a:active{text-decoration:none;/* 指正在点的链接*/ }
+/*去掉点击时背景变灰*/
+input,textarea,select{-webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+/*去掉记住密码后背景变黄*/
+input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  color: #fff!important;
+  background-color: #fff!important;
+}
+/*去掉input的样式*/
+input,button,select,textarea{outline:none; font-family:"PingFangSC-Light","Open Sans",Arial,"Hiragino Sans GB","Microsoft YaHei","微软雅黑",STHeiti,"WenQuanYi Micro Hei",SimSun,sans-serif; }
+input{outline:medium;border: none}
+textarea{resize:none}
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+  /*input{-webkit-appearance:none;}*/
+input[type="submit"],input[type="button"],select,textarea{
+  -webkit-appearance:none;
+  -webkit-gradien:none;
+  -webkit-linear-gradient:none;
+  -moz-linear-gradient:none;
+  -ms-linear-gradient:none;
+  -o-linear-gradient:none;
+  linear-gradient:none;
+}
+.mt20{margin-top: 20px}
+input{background: none;outline:none;}
+/*公共样式 begin*/
+a{-webkit-tap-highlight-color:transparent; -webkit-touch-callout:none;  text-decoration: none;}
+a:focus, input, button, select, textarea{outline:0 none}
+.clearfix{*zoom:1}
+.clearfix:before, .clearfix:after{display:table; line-height:0; content:" "}
+.clearfix:after{clear:both}
+.fl,.lf{float:left}
+.fr,.rf{float:right}
+.pr{position:relative}
+.pa{position:absolute}
+.hand{cursor:pointer;}
+.block{display:block;}
+.inline-block{display:inline-block;}
+.text-center{text-align:center;}
+.none-border{border:0 none;}
+.img-w100{max-width: 100%; display: block;}
+.img-tag{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+.img-h100{height: 100%; width: 100%;display: block;}
+.img-h1000{height: 100%; display: block;margin: 0 auto;}
+
+.hide{display: none;}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #999;
+}
+.fz14{font-size: 14px;}
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: none;
+  border: solid 1px #ccc;
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background-image: url("/themes/website/images/sel1.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 10px;
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  /*padding-right: 14px;*/
+}
+
+
+.amap-logo {
+  right: 0 !important;
+  left: auto !important;
+  display: none;
+}
+
+.amap-copyright {
+  right: 70px !important;
+  left: auto !important;
+}  
+
+.amap-logo,.amap-copyright{
+  display: none!important;
+  }
+
+
+
+  /*地图样式*/
+  #container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button-group {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 12px;
+    padding: 10px;
+  }
+  
+  .button-group .button {
+    height: 28px;
+    line-height: 28px;
+    background-color: #0D9BF2;
+    color: #FFF;
+    border: 0;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    cursor: pointer;
+  }
+  .button-group .inputtext {
+    height: 26px;
+    line-height: 26px;
+    border: 1px;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+    cursor: pointer;
+  }
+   /*
+  .tip {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    background-color: #FFF;
+    text-align: center;
+    border: 1px solid #ccc;
+    line-height: 30px;
+    border-radius: 3px;
+    padding: 0 5px;
+    font-size: 12px;
+  }
+  */
+  #tip {
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    font-size: 12px;
+    right: 10px;
+    top: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    line-height: 30px;
+  }
+  
+  /*
+  #tip input[type='button'] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #0D9BF2;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    outline: none;
+    border: 0;
+  }
+  */
+  .amap-info-content {
+    font-size: 12px;
+  }
+  
+  #myPageTop {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    padding:6px;
+    font-family: "Microsoft Yahei", "微软雅黑", "Pinghei";
+    font-size: 14px;
+  }
+  #myPageTop label {
+    margin: 0 20px 0 0;
+    color: #666666;
+    font-weight: normal;
+  }
+  #myPageTop input {
+    width: 170px;
+  }
+  #myPageTop .column2{
+    padding-left: 25px;
+  }
